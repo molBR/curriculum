@@ -31800,7 +31800,84 @@ var NameProfession = function NameProfession() {
 
 var _default = NameProfession;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"LeftBar.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"BusinessCard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var BusinessCard = function BusinessCard(_ref) {
+  var place = _ref.place,
+      jobtitle = _ref.jobtitle,
+      date = _ref.date;
+  return _react.default.createElement("div", {
+    className: "businesscard"
+  }, _react.default.createElement("div", {
+    className: "image"
+  }, "a"), _react.default.createElement("div", {
+    className: "information"
+  }, _react.default.createElement("div", {
+    className: "place"
+  }, place), _react.default.createElement("div", {
+    className: "jobtitle"
+  }, " ", jobtitle), _react.default.createElement("div", {
+    className: "date"
+  }, date)));
+};
+
+var _default = BusinessCard;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"BusinessHistory.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _BusinessCard = _interopRequireDefault(require("./BusinessCard"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var BusinessHistory = function BusinessHistory() {
+  return _react.default.createElement("div", {
+    className: "businesshistory"
+  }, _react.default.createElement("span", null, "Business History"), _react.default.createElement(_BusinessCard.default, {
+    place: "Clubpetro",
+    jobtitle: "Fullstack Developer",
+    date: "2018 - Now"
+  }), _react.default.createElement(_BusinessCard.default, {
+    place: "Clubpetro",
+    jobtitle: "Fullstack Developer",
+    date: "2018 - Now"
+  }), _react.default.createElement(_BusinessCard.default, {
+    place: "Clubpetro",
+    jobtitle: "Fullstack Developer",
+    date: "2018 - Now"
+  }), _react.default.createElement(_BusinessCard.default, {
+    place: "Clubpetro",
+    jobtitle: "Fullstack Developer",
+    date: "2018 - Now"
+  }));
+};
+
+var _default = BusinessHistory;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./BusinessCard":"BusinessCard.js"}],"LeftBar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31814,6 +31891,8 @@ var _DisplayImage = _interopRequireDefault(require("./DisplayImage"));
 
 var _NameProfession = _interopRequireDefault(require("./NameProfession"));
 
+var _BusinessHistory = _interopRequireDefault(require("./BusinessHistory"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -31823,12 +31902,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var LeftBar = function LeftBar() {
   return _react.default.createElement("div", {
     className: "leftbar"
-  }, _react.default.createElement(_DisplayImage.default, null), _react.default.createElement(_NameProfession.default, null));
+  }, _react.default.createElement(_DisplayImage.default, null), _react.default.createElement(_NameProfession.default, null), _react.default.createElement(_BusinessHistory.default, null));
 };
 
 var _default = LeftBar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./DisplayImage":"DisplayImage.js","./NameProfession":"NameProfession.js"}],"Content.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./DisplayImage":"DisplayImage.js","./NameProfession":"NameProfession.js","./BusinessHistory":"BusinessHistory.js"}],"Content.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31902,7 +31981,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59381" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

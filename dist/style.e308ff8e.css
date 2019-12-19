@@ -86,5 +86,70 @@ body {
   line-height: 27px;
 }
 
+.businesshistory {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  margin-left: 4vw;
+  margin-top: 10%;
+  color: #4F4F4F;
+  display: flex;
+  flex-direction: column;
+
+}
+.businesscard {
+  margin-top:5vh;
+  margin-right:5vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  background-color: yellow;
+  width: 5vw;
+  height: 5vw
+}
+
+.information {
+  margin-left:2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.place{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
+.jobtitle{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.date {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+
+  /* Gray 3 */
+
+  color: #828282;
+}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
